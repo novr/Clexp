@@ -46,7 +46,7 @@ final class PasteboardService {
 
         guard let value = value else { return }
         guard let from = Environment.current.defaults.from, !from.isEmpty,
-        let to = Environment.current.defaults.with, !to.isEmpty else { return }
+        let to = Environment.current.defaults.with else { return }
 
         let newValue = value.replacingOccurrences(of: from, with: to, options: .regularExpression, range: nil)
 
